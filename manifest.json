@@ -11,35 +11,15 @@
             "128": "icons/tricko128.png"
         }
     },
+    "permissions": [
+        "declarativeNetRequest",
+        "declarativeNetRequestWithHostAccess"
+    ],
     "background": {
         "service_worker": "background.js"
     },
-    "content_scripts": [
-        {
-            "matches": [
-                "https://*/*"
-            ],
-            "js": [
-                "content.js"
-            ],
-            "run_at": "document_start",
-            "all_frames": false
-        }
-    ],
-    "permissions": [
-        "scripting"
-    ],
     "host_permissions": [
+        "http://*/*",
         "https://*/*"
-    ],
-    "web_accessible_resources": [
-        {
-            "resources": [
-                "adblocker.js"
-            ],
-            "matches": [
-                "https://*/*"
-            ]
-        }
     ]
 }
