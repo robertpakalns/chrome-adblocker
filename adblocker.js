@@ -2,8 +2,10 @@ const blockedDomains = [
     "adinplay.com"
 ]
 
-const rules = blockedDomains.map(domain => ({
-    id: blockedDomains.indexOf(domain) + 1,
+const domainsSet = new Set(blockedDomains)
+
+const rules = [...domainsSet].map((domain, index) => ({
+    id: index + 1,
     action: { type: "block" },
     condition: {
         urlFilter: domain,
