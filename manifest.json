@@ -4,7 +4,7 @@
     "version": "1.0",
     "description": "An extension for blocking scripts on runtime",
     "action": {
-        "default_popup": "popup.html",
+        "default_popup": "ui/index.html",
         "default_icon": {
             "16": "icons/tricko16.png",
             "48": "icons/tricko48.png",
@@ -16,7 +16,7 @@
         "declarativeNetRequestWithHostAccess"
     ],
     "background": {
-        "service_worker": "background.js"
+        "service_worker": "adblocker.js"
     },
     "host_permissions": [
         "http://*/*",
