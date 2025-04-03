@@ -1,4 +1,4 @@
-const blockedDomains = [
+const adDomains = [
     "adinplay.com",
     "amazon-adsystem.com",
     "doubleclick.net",
@@ -6,11 +6,18 @@ const blockedDomains = [
     "pagead2.googlesyndication.com",
     "ads-twitter.com",
     "image6.pubmatic.com",
+    "googleadservices.com",
+    "adrecover.com",
 
     "adbox.lv"
 ]
 
-const rules = blockedDomains.map((domain, index) => ({
+const trackerDomains = [
+    "google-analytics.com",
+    "googletagmanager.com"
+]
+
+const rules = [...trackerDomains, ...adDomains].map((domain, index) => ({
     id: index + 1,
     action: { type: "block" },
     condition: {
