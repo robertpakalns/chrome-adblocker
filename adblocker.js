@@ -8,6 +8,7 @@ const adDomains = [
     "image6.pubmatic.com",
     "googleadservices.com",
     "adrecover.com",
+    "bet365partners.com",
 
     "adbox.lv"
 ]
@@ -17,7 +18,14 @@ const trackerDomains = [
     "googletagmanager.com"
 ]
 
-const rules = [...trackerDomains, ...adDomains].map((domain, index) => ({
+const maliciousDomains = [
+    "steamecommunjty.com",
+    "sneamcommnumnlty.com",
+    "steamconmmunity.cfd",
+    "casumonster.top"
+]
+
+const rules = [...trackerDomains, ...adDomains, ...maliciousDomains].map((domain, index) => ({
     id: index + 1,
     action: { type: "block" },
     condition: {
@@ -29,4 +37,4 @@ const rules = [...trackerDomains, ...adDomains].map((domain, index) => ({
 chrome.declarativeNetRequest.updateDynamicRules({
     addRules: rules,
     removeRuleIds: rules.map(rule => rule.id)
-})  
+})
