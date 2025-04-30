@@ -22,7 +22,9 @@ const maliciousDomains = [
     "steamecommunjty.com",
     "sneamcommnumnlty.com",
     "steamconmmunity.cfd",
-    "casumonster.top"
+    "steamecommunnity.cfd",
+    "casumonster.top",
+    "e.vg"
 ]
 
 const rules = [...trackerDomains, ...adDomains, ...maliciousDomains].map((domain, index) => ({
