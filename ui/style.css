@@ -1,13 +1,10 @@
 body {
     user-select: none;
+    width: max-content;
 }
 
 img {
     -webkit-user-drag: none;
-}
-
-.cont {
-    width: max-content;
 }
 
 .header {
@@ -20,5 +17,17 @@ img {
     & img {
         margin-left: 5px;
         width: 1.5rem;
+    }
+}
+
+#hint {
+    font-size: 0.6rem;
+    color: gray;
+    height: 1em;
+    opacity: 0;
+    transition: opacity 0.5s;
+
+    &.visible {
+        opacity: 1;
     }
 }
