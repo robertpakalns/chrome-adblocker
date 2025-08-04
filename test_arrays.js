@@ -31,7 +31,7 @@ const checkSorting = (list, rawList, name) => {
     if (JSON.stringify(sorted) === JSON.stringify(originalSorted)) console.log(`✅ ${name}: list is already sorted.`)
     else {
         console.log(`🔃 ${name}: list is not sorted. Sorted list:`)
-        console.log(JSON.stringify(sorted, null, 2))
+        console.log(JSON.stringify(sorted))
     }
 }
 
