@@ -1,5 +1,6 @@
-import blackListRaw from "./assets/blacklist.json" with { type: "json" };
-import whiteListRaw from "./assets/whitelist.json" with { type: "json" };
+import adsRaw from "./assets/jsons/ads.json" with { type: "json" };
+import maliciousRaw from "./assets/jsons/malicious.json" with { type: "json" };
+import trackersRaw from "./assets/jsons/trackers.json" with { type: "json" };
 
 const processList = (raw, name) => {
   let processed = false;
@@ -37,5 +38,6 @@ const processList = (raw, name) => {
   }
 };
 
-processList(blackListRaw, "Blacklist");
-processList(whiteListRaw, "Whitelist");
+processList(adsRaw, "Ads");
+processList(maliciousRaw, "Malicious");
+processList(trackersRaw, "Trackers");
