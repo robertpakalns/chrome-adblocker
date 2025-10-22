@@ -3,6 +3,7 @@ import { join, resolve } from "path";
 import adsRaw from "./assets/jsons/ads.json" with { type: "json" };
 import maliciousRaw from "./assets/jsons/malicious.json" with { type: "json" };
 import trackersRaw from "./assets/jsons/trackers.json" with { type: "json" };
+import scamsRaw from "./assets/jsons/scams.json" with { type: "json" };
 
 const processList = (raw, name, path) => {
   let processed = false;
@@ -46,3 +47,4 @@ const jsonsDir = resolve("./assets/jsons");
 processList(adsRaw, "Ads", join(jsonsDir, "ads.json"));
 processList(maliciousRaw, "Malicious", join(jsonsDir, "malicious.json"));
 processList(trackersRaw, "Trackers", join(jsonsDir, "trackers.json"));
+processList(scamsRaw, "Scams", join(jsonsDir, "scams.json"));
